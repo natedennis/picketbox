@@ -280,6 +280,9 @@ public abstract class UsernamePasswordLoginModule extends AbstractServerLoginMod
          // Allow the storeDigestCallback to hash the expected password
          if( hashAlgorithm != null && hashStorePassword == true )
             expectedPassword = createPasswordHash(username, expectedPassword, STORE_DIGEST_CALLBACK);
+         
+         PicketBoxLogger.LOGGER.debug("hash from form: " + password + " hash from db: " + expectedPassword);
+
          if( validatePassword(password, expectedPassword) == false )
          {
             Throwable ex = getValidateError();

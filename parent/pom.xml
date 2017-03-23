@@ -67,6 +67,7 @@
    </build>
 
    <repositories>
+
     <repository>
       <id>repository.jboss.org</id>
       <name>JBoss Repository</name>
